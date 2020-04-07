@@ -9,7 +9,7 @@ public class Logic {
 	private PApplet app;
 	private String[] info1;
 	private LinkedList<Personajes> animales;
-	private LinkedList<Casas> casitas;
+	//private LinkedList<Casas> casitas;
 	private PImage imagencita;
 	
 	public Logic(PApplet app) {
