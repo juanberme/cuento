@@ -16,15 +16,27 @@ public class Logic {
 		
 		cargar();
 		
-		
+		cargartext();
 	}
 	
 	public void  cargar() {
-		info1= app.loadStrings("");
-		
+		animales = new LinkedList<Personajes>();
+		casitas = new LinkedList <Casas>();
+		info1= app.loadStrings("../data/imports/cerdosHistoria.txt");
 		
 		
 	}
+	
+	public void cargartext() {
+		for (int i=0; i < info1.length ; i++) {
+			
+			
+			
+		}
+		
+	}
+	
+	
 	
 	
 	
