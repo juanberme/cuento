@@ -16,13 +16,13 @@ public class Controller {
 
 
 	public void mousencima() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 
 	public void clikeo() {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
