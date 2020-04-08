@@ -9,8 +9,19 @@ public class Lobo extends Personajes{
 		super(posx, posy, tamx, tamy, lobito, lobito2, app);
 	}
 	
-	public void draw() {
+	public void draw(boolean pintar) {
+		if (pintar ==true) {
+			
 		appp.image(getImagen1(), getPosx(), getPosy());
+		
+		}
 	}
+	
+	public void interior() {
+		appp.image(getImagen2(), getPosx(), getPosy());
+		
+	}
+	
+	
 
 }

@@ -73,6 +73,11 @@ public abstract class Personajes {
 		
 		
 	}
+
+	public void interior() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 	

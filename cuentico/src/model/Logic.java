@@ -77,7 +77,7 @@ public class Logic {
 			if(recorrerTexto[i].contentEquals("lobo")){
 				PImage lobito = app.loadImage("./data/imports/img/lobo.png");
 				PImage lobito2 = app.loadImage("./data/imports/img/lobo2.png");
-				animales.add(new Lobo(0,20,0,0,lobito,lobito2,app));
+				animales.add(new Lobo(0,90,0,0,lobito,lobito2,app));
 				
 			}
 			
@@ -88,7 +88,7 @@ public class Logic {
 
 	public void draw() {
 		app.image(imagenFondo, 0, 0);
-
+		getAnimales().get(0).draw(true);
 	}
 
 	public LinkedList<Personajes> getAnimales() {

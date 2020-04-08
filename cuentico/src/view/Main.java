@@ -34,28 +34,28 @@ public class Main extends PApplet {
 		background(0);
 		
 		controlle.draw();
-		
+		mouseOver();
 
 		if (paja==true) {
 			controlle.casotas().get(0).draw();
-			controlle.animales().get(0).draw(false);
-			mouseOver();
-		}else {controlle.animales().get(0).draw(true);
+			controlle.animales().get(1).draw(false);
+			
+		}else {controlle.animales().get(1).draw(true);
 			
 		}
 		if (madera==true) {
 			controlle.casotas().get(1).draw();
-			controlle.animales().get(1).draw(false);
-			mouseOver();
-		}else {controlle.animales().get(1).draw(true);
+			controlle.animales().get(2).draw(false);
+			
+		}else {controlle.animales().get(2).draw(true);
 			
 		}
 		if (ladrillos==true) {
 			controlle.casotas().get(2).draw();
-			controlle.animales().get(2).draw(false);
-			mouseOver();
+			controlle.animales().get(3).draw(false);
+			
 		}else {
-			controlle.animales().get(2).draw(true);
+			controlle.animales().get(3).draw(true);
 		}
 		
 		text("X:  "+mouseX+"   Y:   "+mouseY,mouseX,mouseY);
@@ -63,7 +63,9 @@ public class Main extends PApplet {
 	}
 	
 	public void mouseOver() {
-		controlle.mousencima();
+		if (mouseX > 345 && mouseX < 451 && mouseY > 352 && mouseY < 439 ) {
+			controlle.animales().get(0).interior();
+		}
 
 		if (mouseX > 71 && mouseX < 232 && mouseY > 204 && mouseY < 406 && paja==true) {
 
@@ -82,6 +84,8 @@ public class Main extends PApplet {
 		if (mouseX > 574 && mouseX < 750 && mouseY > 207 && mouseY < 393 && ladrillos == true) {
 			controlle.casotas().get(2).interior();
 		}
+		
+
 		
 	}
 	
