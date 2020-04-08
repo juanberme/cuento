@@ -111,7 +111,7 @@ public class Main extends PApplet {
 			controlle.casotas().get(2).interior();
 		}
 		
-		if (mouseX >0 && mouseX <800 && mouseY>340 && mouseY < 440 ) {
+		if (mouseX >0 && mouseX <800 && mouseY>250 && mouseY < 440 ) {
 			
 			scroy= controlle.scrolly();
 			scroy =scroy-5;
@@ -153,26 +153,6 @@ public class Main extends PApplet {
 		
 	}
 	
-	public void mouseDragged() {
-	
-		
-		/*if (pantalla==1) {
-			System.out.println("arrastrando");
-			int posxlobo = controlle.animales().get(0).getPosx()+(mouseX- posxini);
-			int posylobo = controlle.animales().get(0).getPosy()+(mouseY - posyini);
-			controlle.animales().get(0).setPosx(posxlobo);
-			controlle.animales().get(0).setPosy(posylobo);
-			controlle.animales().get(0).interior();
-			posxini=mouseX;
-			posyini=mouseY;
-			
-			System.out.println("arrastrando");
-			
-			
-		}*/
-		
-		
-		
-	}
+
 	
 }
