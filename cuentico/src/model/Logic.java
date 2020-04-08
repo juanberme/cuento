@@ -37,13 +37,22 @@ public class Logic {
 
 	public void cargartext() {
 		String[] recorrerTexto = info1[0].split(" ");
+		
 		for (int i = 0; i < recorrerTexto.length; i++) {
 			if (recorrerTexto[i].contentEquals("cerdito")) {
 				if (recorrerTexto[i + 1].contentEquals("juan")) {
 					PImage juanImage = app.loadImage("../data/imports/img/cerditojuan1.png");
 					PImage juanImage2 = app.loadImage("../data/imports/img/cerditojuan2.png");
 					animales.add(new CerditoA(0, 0, 0, 0, juanImage, juanImage2, app));
-
+					
+					String palabra1 = recorrerTexto[i];
+					palabra1.toUpperCase();
+					String palabra2 = recorrerTexto[i+1];
+					palabra2.toUpperCase();
+					recorrerTexto[i] = palabra1;
+					recorrerTexto[i+1] = palabra2;
+					
+					
 				} else if (recorrerTexto[i + 1].contentEquals("oscar")) {
 					PImage oscarImage = app.loadImage("../data/imports/img/cerditooscar1.png");
 					PImage oscarImage2 = app.loadImage("../data/imports/img/cerditooscar2.png");
@@ -90,8 +99,23 @@ public class Logic {
 			}
 			
 			
+			
 		}
 		System.out.println(casitas.size());
+		
+		String[] juntador;
+		juntador = new String[1];
+		
+		for(int o = 0; o < recorrerTexto.length; o++) {
+			
+			juntador[0] = juntador[0] +" "+ recorrerTexto[o];
+			
+			
+		}
+		
+		app.saveStrings("./data/exports/cuentoFinal.txt", juntador);
+		
+		
 	}
 
 	public void draw() {
