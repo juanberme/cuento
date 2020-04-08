@@ -56,20 +56,20 @@ public class Logic {
 						PImage casa1Image = app.loadImage("../data/imports/img/casadepaja1.png");
 						PImage casa1Image2 = app.loadImage("../data/imports/img/casadepaja2.png");
 						PImage casa1Image3 = app.loadImage("../data/imports/img/casadepaja3.png");
-						casitas.add(new Casa1(0, 0, 0, 0,casa1Image,casa1Image2,casa1Image3));
+						casitas.add(new Casa1(0, 0, 0, 0,casa1Image,casa1Image2,casa1Image3,app));
 						
 
 					} else if (recorrerTexto[i + 2].contentEquals("madera")) {
 						PImage casa2Image = app.loadImage("../data/imports/img/casademadera1.png");
 						PImage casa2Image2 = app.loadImage("../data/imports/img/casademadera2.png");
 						PImage casa2Image3 = app.loadImage("../data/imports/img/casademadera3.png");
-						casitas.add(new Casa2(0, 0, 0, 0,casa2Image,casa2Image2,casa2Image3));
+						casitas.add(new Casa2(0, 0, 0, 0,casa2Image,casa2Image2,casa2Image3,app));
 
 					} else if (recorrerTexto[i + 2].contentEquals("ladrillos")) {
 						PImage casa3Image = app.loadImage("../data/imports/img/casadeladrillos1.png");
 						PImage casa3Image2 = app.loadImage("../data/imports/img/casadeladrillos2.png");
 						PImage casa3Image3 = app.loadImage("../data/imports/img/casadeladrillos3.png");
-						casitas.add(new Casa3(0, 0, 0, 0,casa3Image,casa3Image2,casa3Image3));
+						casitas.add(new Casa3(0, 0, 0, 0,casa3Image,casa3Image2,casa3Image3,app));
 					}
 				}
 			}
