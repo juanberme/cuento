@@ -119,9 +119,9 @@ public class Main extends PApplet {
 	}
 	
 	public void mouseDragged() {
+	
 		
-		
-		/*if (mouseX > posxini && mouseX < posxini2 && mouseY >  posyini && mouseY < posyini2) {
+		//if (mouseX > 345 && mouseX < 451 && mouseY >  352 && mouseY < 442) {
 			System.out.println("arrastrando");
 			int posxlobo = controlle.animales().get(0).getPosx()+(mouseX- posxini);
 			int posylobo = controlle.animales().get(0).getPosy()+(mouseY - posyini);
@@ -133,9 +133,9 @@ public class Main extends PApplet {
 			System.out.println("arrastrando");
 			
 			
-		}
+		//}
 		
-		*/
+		
 		
 	}
 	
