@@ -9,11 +9,11 @@ public class CerditoA extends Personajes{
 		super(posx, posy, tamx, tamy, juanImage2, juanImage2, app);
 	}
 	
-	public void draw() {
-		
+	public void draw(boolean pintar) {
+		if (pintar==true) {
 		appp.image(getImagen1(),getPosx(),getPosy());
 		
-		
+		}
 		
 	}
 

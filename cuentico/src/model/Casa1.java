@@ -13,6 +13,7 @@ public class Casa1 extends Casas{
 	}
 
 	public void draw() {
+		
 		app2.image(getImagen1(),getPosx(),getPosy());
 		
 		

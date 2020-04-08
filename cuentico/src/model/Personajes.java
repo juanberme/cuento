@@ -69,7 +69,7 @@ public abstract class Personajes {
 		this.tamy = tamy;
 	}
 
-	public void draw() {
+	public void draw(boolean pintar) {
 		
 		
 	}
