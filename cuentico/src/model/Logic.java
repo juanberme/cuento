@@ -12,7 +12,7 @@ public class Logic {
 	private LinkedList<Casas> casitas;
 	private PImage imagencita;
 	private String word;
-	
+	private PImage imagenFondo;
 	public Logic(PApplet app) {
 		
 		cargar();
@@ -22,6 +22,7 @@ public class Logic {
 	
 	public void  cargar() {
 		
+		imagenFondo = app.loadImage("./data/imports/img/principal.png");
 		animales = new LinkedList<Personajes>();
 		casitas = new LinkedList <Casas>();
 		info1= app.loadStrings("../data/imports/cerdosHistoria.txt");
@@ -32,7 +33,11 @@ public class Logic {
 		String[] recorrerTexto = info1[0].split(" ");
 		for(int i = 0; i < recorrerTexto.length; i++) {
 			if(recorrerTexto[i].contentEquals("cerdito")) {
-				if(recorrerTexto[i+1].contentEquals()) {
+				if(recorrerTexto[i+1].contentEquals("juan")) {
+					
+				}else if(recorrerTexto[i+1].contentEquals("oscar")) {
+					
+				}else if(recorrerTexto[i+1].contentEquals("julian")) {
 					
 				}
 			}
@@ -49,6 +54,9 @@ public class Logic {
 		}
 		
 	}
+	
+}
+}
 		
 	
 	
@@ -58,4 +66,4 @@ public class Logic {
 	
 	
 
-}
+
