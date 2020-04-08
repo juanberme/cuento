@@ -7,7 +7,7 @@ public class Main extends PApplet {
 	
 	boolean paja,madera,ladrillos,pintar;
 	private  Controller controlle;
-	
+	int posxini,posyini,posxini2,posyini2;
 
 	public static void main(String[] args) {
 		
@@ -26,6 +26,10 @@ public class Main extends PApplet {
 	public void setup() {
 		controlle = new Controller(this);
 		pintar=true;
+		posxini=345;
+		posyini=451;
+		posxini2=345+106;
+		posyini2=451+90;
 		
 	}
 	
@@ -34,7 +38,7 @@ public class Main extends PApplet {
 		background(0);
 		
 		controlle.draw();
-		mouseOver();
+		
 
 		if (paja==true) {
 			controlle.casotas().get(0).draw();
@@ -59,12 +63,16 @@ public class Main extends PApplet {
 		}
 		
 		text("X:  "+mouseX+"   Y:   "+mouseY,mouseX,mouseY);
+		mouseOver();
+		
 		
 	}
 	
 	public void mouseOver() {
 		if (mouseX > 345 && mouseX < 451 && mouseY > 352 && mouseY < 439 ) {
 			controlle.animales().get(0).interior();
+
+			
 		}
 
 		if (mouseX > 71 && mouseX < 232 && mouseY > 204 && mouseY < 406 && paja==true) {
@@ -107,6 +115,27 @@ public class Main extends PApplet {
 		}
 		
 		
+		
+	}
+	
+	public void mouseDragged() {
+		
+		
+		/*if (mouseX > posxini && mouseX < posxini2 && mouseY >  posyini && mouseY < posyini2) {
+			System.out.println("arrastrando");
+			int posxlobo = controlle.animales().get(0).getPosx()+(mouseX- posxini);
+			int posylobo = controlle.animales().get(0).getPosy()+(mouseY - posyini);
+			controlle.animales().get(0).setPosx(posxlobo);
+			controlle.animales().get(0).setPosy(posylobo);
+			posxini=mouseX;
+			posyini=mouseY;
+			
+			System.out.println("arrastrando");
+			
+			
+		}
+		
+		*/
 		
 	}
 	
