@@ -84,6 +84,7 @@ System.out.println(casitas.size());
 		app.image(imagenFondo,0,0);
 		
 	}
+	
 
 	public LinkedList<Personajes> getAnimales() {
 		return animales;

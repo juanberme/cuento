@@ -88,6 +88,9 @@ public abstract class Casas {
 		
 		
 	}
-	
+	public void interior() {
+		
+		
+	}
 	
 }
