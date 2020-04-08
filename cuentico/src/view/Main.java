@@ -7,7 +7,7 @@ public class Main extends PApplet {
 	
 	boolean paja,madera,ladrillos,pintar;
 	private  Controller controlle;
-	int posxini,posyini,posxini2,posyini2;
+	int posxini,posyini,posxini2,posyini2,pantalla,scroy;
 
 	public static void main(String[] args) {
 		
@@ -30,46 +30,64 @@ public class Main extends PApplet {
 		posyini=451;
 		posxini2=345+106;
 		posyini2=451+90;
-		
+		pantalla=0;
 	}
 	
 	public void draw() {
-		
-		background(0);
-		
-		controlle.draw();
-		
+		switch (pantalla) {
+		case 0:
+			background(0);
+			controlle.screenini();
+			
+			break;
+		case 1:
+			background(0);
+			
+			controlle.draw();
+			
+			if(controlle.pantallita()==2) {
+			if (paja==true) {
+				controlle.casotas().get(0).draw();
+				controlle.animales().get(1).draw(false);
+				
+			}else {controlle.animales().get(1).draw(true);
+				
+			}
+			if (madera==true) {
+				controlle.casotas().get(1).draw();
+				controlle.animales().get(2).draw(false);
+				
+			}else {controlle.animales().get(2).draw(true);
+				
+			}
+			if (ladrillos==true) {
+				controlle.casotas().get(2).draw();
+				controlle.animales().get(3).draw(false);
+				
+			}else {
+				controlle.animales().get(3).draw(true);
+			}
+			}
+			
+			mouseOver();
+			
+			break;
+		case 2:
+			
+			controlle.screenend();
+			
+			break;
+		case 3:
+			
+			break;
 
-		if (paja==true) {
-			controlle.casotas().get(0).draw();
-			controlle.animales().get(1).draw(false);
-			
-		}else {controlle.animales().get(1).draw(true);
-			
 		}
-		if (madera==true) {
-			controlle.casotas().get(1).draw();
-			controlle.animales().get(2).draw(false);
-			
-		}else {controlle.animales().get(2).draw(true);
-			
-		}
-		if (ladrillos==true) {
-			controlle.casotas().get(2).draw();
-			controlle.animales().get(3).draw(false);
-			
-		}else {
-			controlle.animales().get(3).draw(true);
-		}
-		
-		text("X:  "+mouseX+"   Y:   "+mouseY,mouseX,mouseY);
-		mouseOver();
 		
 		
 	}
 	
 	public void mouseOver() {
-		if (mouseX > 345 && mouseX < 451 && mouseY > 352 && mouseY < 439 ) {
+		if (mouseX > 345 && mouseX < 451 && mouseY > 352 && mouseY < 439 && controlle.pantallita()==2  ) {
 			controlle.animales().get(0).interior();
 
 			
@@ -93,27 +111,44 @@ public class Main extends PApplet {
 			controlle.casotas().get(2).interior();
 		}
 		
+		if (mouseX >0 && mouseX <800 && mouseY>340 && mouseY < 440 ) {
+			
+			scroy= controlle.scrolly();
+			scroy =scroy-5;
+			controlle.scroly(scroy);
+		}
+		
 
 		
 	}
 	
 	public void mouseClicked() {
 	
+		if (mouseX>343 &&  mouseX<486 && mouseY>233 && mouseY<298 && pantalla==0) {
+			pantalla=1;
+			
+		}
+		
 		// area paja
-		if (mouseX > 85 && mouseX < 202 && mouseY > 318 && mouseY < 394) {
+		if (mouseX > 85 && mouseX < 202 && mouseY > 318 && mouseY < 394 && controlle.pantallita()==2) {
 			paja=true;
 			
 		}
 		// area madera
-		if (mouseX > 331 && mouseX < 427 && mouseY > 286 && mouseY < 333) {
+		if (mouseX > 331 && mouseX < 427 && mouseY > 286 && mouseY < 333 && controlle.pantallita()==2) {
 			madera = true;
 			
 		}
 		// area ladrillo
-		if (mouseX > 590 && mouseX < 739 && mouseY > 308 && mouseY < 372) {
+		if (mouseX > 590 && mouseX < 739 && mouseY > 308 && mouseY < 372 && controlle.pantallita()==2) {
 			ladrillos = true; 
 		}
 		
+		if (mouseX > 660 && mouseX< 780 && mouseY >390 && mouseY<422 && controlle.pantallita()==2) {
+			
+			pantalla=2;
+			
+		}
 		
 		
 	}
@@ -121,19 +156,20 @@ public class Main extends PApplet {
 	public void mouseDragged() {
 	
 		
-		//if (mouseX > 345 && mouseX < 451 && mouseY >  352 && mouseY < 442) {
+		/*if (pantalla==1) {
 			System.out.println("arrastrando");
 			int posxlobo = controlle.animales().get(0).getPosx()+(mouseX- posxini);
 			int posylobo = controlle.animales().get(0).getPosy()+(mouseY - posyini);
 			controlle.animales().get(0).setPosx(posxlobo);
 			controlle.animales().get(0).setPosy(posylobo);
+			controlle.animales().get(0).interior();
 			posxini=mouseX;
 			posyini=mouseY;
 			
 			System.out.println("arrastrando");
 			
 			
-		//}
+		}*/
 		
 		
 		

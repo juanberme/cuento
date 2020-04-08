@@ -39,4 +39,29 @@ public class Controller {
 		return logi.getCasitas();
 
 	}
+
+	public void screenini() {
+		logi.screenini();
+	}
+
+	public void screenend() {
+		logi.screenend();
+		
+	}
+	
+	public int scrolly() {
+		
+		return logi.getPosyscroll();
+		
+	}
+	
+	public int pantallita() {
+		return logi.getPantallita();
+	}
+	
+	
+	public void scroly(int scroy) {
+		
+		logi.setPosyscroll(scroy);
+	}
 }
