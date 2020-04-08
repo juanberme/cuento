@@ -33,15 +33,13 @@ public class Main extends PApplet {
 		
 		background(0);
 		
-		text("X:  "+mouseX+"   Y:   "+mouseY,mouseX,mouseY);
+		
 		controlle.draw();
-		for(int i=0;i<controlle.animales().size();i++) {
+		for(int i=0;i< controlle.animales().size();i++) {
 			controlle.animales().get(i).draw();
-			controlle.casotas().get(i).draw();
-			
 			
 		}
-		
+		text("X:  "+mouseX+"   Y:   "+mouseY,mouseX,mouseY);
 		
 	}
 	
