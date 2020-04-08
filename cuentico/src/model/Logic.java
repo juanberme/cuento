@@ -11,6 +11,7 @@ public class Logic {
 	private LinkedList<Personajes> animales;
 	private LinkedList<Casas> casitas;
 	private PImage imagencita;
+	private PImage imagenFondo;
 	
 	public Logic(PApplet app) {
 		
@@ -20,6 +21,8 @@ public class Logic {
 	}
 	
 	public void  cargar() {
+		
+		imagenFondo = app.loadImage("./data/imports/img/principal.png");
 		animales = new LinkedList<Personajes>();
 		casitas = new LinkedList <Casas>();
 		info1= app.loadStrings("../data/imports/cerdosHistoria.txt");
