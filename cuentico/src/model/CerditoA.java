@@ -1,9 +1,20 @@
 package model;
 
-public class CerditoA extends Personajes{
+import processing.core.PApplet;
+import processing.core.PImage;
 
-	public CerditoA(int posx, int posy, int tamx, int tamy) {
-		super(posx, posy, tamx, tamy);
+public class CerditoA extends Personajes{
+	
+	public CerditoA(int posx, int posy, int tamx, int tamy, PImage juanImage, PImage juanImage2, PApplet app) {
+		super(posx, posy, tamx, tamy, juanImage2, juanImage2, app);
+	}
+	
+	public void draw() {
+		
+		appp.image(getImagen1(),getPosx(),getPosy());
+		
+		
+		
 	}
 
 }

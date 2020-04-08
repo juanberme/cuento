@@ -44,6 +44,11 @@ public abstract class Casas {
 	public void setTamy(int tamy) {
 		this.tamy = tamy;
 	}
+
+	public void draw() {
+		
+		
+	}
 	
 	
 }
