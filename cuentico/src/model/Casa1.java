@@ -21,7 +21,7 @@ public class Casa1 extends Casas{
 	
 	public void interior() {
 		
-		app2.image(getImagen2(),getPosx(),getPosy());
+		app2.image(getImagen3(),getPosx(),getPosy());
 		
 	}
 }

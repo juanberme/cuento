@@ -39,21 +39,21 @@ public class Main extends PApplet {
 		if (paja==true) {
 			controlle.casotas().get(0).draw();
 			controlle.animales().get(0).draw(false);
-			
+			mouseOver();
 		}else {controlle.animales().get(0).draw(true);
 			
 		}
 		if (madera==true) {
 			controlle.casotas().get(1).draw();
 			controlle.animales().get(1).draw(false);
-			
+			mouseOver();
 		}else {controlle.animales().get(1).draw(true);
 			
 		}
 		if (ladrillos==true) {
 			controlle.casotas().get(2).draw();
 			controlle.animales().get(2).draw(false);
-			
+			mouseOver();
 		}else {
 			controlle.animales().get(2).draw(true);
 		}
@@ -64,7 +64,24 @@ public class Main extends PApplet {
 	
 	public void mouseOver() {
 		controlle.mousencima();
+
+		if (mouseX > 71 && mouseX < 232 && mouseY > 204 && mouseY < 406 && paja==true) {
+
+			controlle.casotas().get(0).interior();
+			
+		}
 		
+		// casa madera
+
+		if (mouseX > 312 && mouseX < 467 && mouseY > 147 && mouseY < 347 && madera==true) {
+			controlle.casotas().get(1).interior();
+		}
+		
+		// casa ladrillo
+
+		if (mouseX > 574 && mouseX < 750 && mouseY > 207 && mouseY < 393 && ladrillos == true) {
+			controlle.casotas().get(2).interior();
+		}
 		
 	}
 	
